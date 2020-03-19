@@ -56,38 +56,6 @@ public class XmlElement
         return null;
     }
 
-    public void copyFrom(XmlElement element)
-    {
-        if (element == null) return;
-
-        for (XmlElement parentChild : element.children)
-        {
-            XmlElement child = doesChildExist(parentChild);
-            if (child == null)
-            {
-                //create a new copy of the child and change the parent
-                XmlElement newElement = new XmlElement(this, parentChild.children, parentChild.attributes, parentChild.name, parentChild.value);
-                children.add(newElement);
-            }
-            else
-            {
-                child.copyFrom(parentChild);
-            }
-        }
-    }
-
-    public XmlElement doesChildExist(XmlElement parentChild)
-    {
-        for (XmlElement child : this.children)
-        {
-            if (child.name.equals(parentChild.name))
-            {
-                return child;
-            }
-        }
-        return null;
-    }
-
     public List<XmlElement> getXPath(XPathNode node)
     {
         List<XmlElement> matches = new ArrayList<>();
