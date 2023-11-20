@@ -13,4 +13,6 @@ module com.snowdonia.lib {
     exports com.snowdonia.lib.cloud;
     exports com.snowdonia.lib.file;
     exports com.snowdonia.lib.ui;
+    exports com.snowdonia.lib.data;
+    exports com.snowdonia.lib.input;
 }
