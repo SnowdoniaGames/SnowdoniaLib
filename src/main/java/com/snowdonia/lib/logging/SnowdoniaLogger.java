@@ -1,12 +1,10 @@
 package com.snowdonia.lib.logging;
 
 import org.apache.logging.log4j.*;
-import org.apache.logging.log4j.core.config.Configurator;
 
 import java.io.File;
-import java.net.URL;
 
-@SuppressWarnings({"rawtypes", "ResultOfMethodCallIgnored"})
+@SuppressWarnings({"rawtypes", "ResultOfMethodCallIgnored", "unused"})
 public class SnowdoniaLogger
 {
     public static void init(String logDir)

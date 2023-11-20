@@ -1,17 +1,14 @@
 package com.snowdonia.lib.cloud;
 
-import java.awt.Desktop;
-
 import com.dropbox.core.DbxPKCEWebAuth;
 import com.snowdonia.lib.logging.SnowdoniaLogger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;

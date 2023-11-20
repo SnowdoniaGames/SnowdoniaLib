@@ -3,6 +3,7 @@ package com.snowdonia.lib.cloud;
 import com.dropbox.core.*;
 import com.dropbox.core.oauth.DbxCredential;
 import com.dropbox.core.v2.DbxClientV2;
+import com.dropbox.core.v2.files.WriteMode;
 import com.dropbox.core.v2.users.FullAccount;
 import com.snowdonia.lib.DummyApplication;
 import com.snowdonia.lib.logging.SnowdoniaLogger;
@@ -71,6 +72,18 @@ public class DropboxApi
         catch (DbxException | IOException e)
         {
             SnowdoniaLogger.fatal(DropboxApi.class, "Unable to download file : " + remoteFile);
+        }
+    }
+
+    public static void upload_file(File localFile, String remoteFile)
+    {
+        try (InputStream inFile = new FileInputStream(localFile))
+        {
+            client.files().uploadBuilder(remoteFile).withMode(WriteMode.OVERWRITE).uploadAndFinish(inFile);
+        }
+        catch (DbxException | IOException e)
+        {
+            SnowdoniaLogger.fatal(DropboxApi.class, "Unable to upload file : " + remoteFile);
         }
     }
 
