@@ -8,11 +8,12 @@ module com.snowdonia.lib {
     requires java.desktop;
     requires com.google.gson;
     requires com.sun.jna.platform;
-    exports com.snowdonia.lib.logging;
-    exports com.snowdonia.lib.util;
     exports com.snowdonia.lib.cloud;
     exports com.snowdonia.lib.file;
-    exports com.snowdonia.lib.ui;
-    exports com.snowdonia.lib.data;
+    exports com.snowdonia.lib.imagerecognition;
+    exports com.snowdonia.lib.imagerecognition.data;
     exports com.snowdonia.lib.input;
+    exports com.snowdonia.lib.logging;
+    exports com.snowdonia.lib.ui;
+    exports com.snowdonia.lib.util;
 }

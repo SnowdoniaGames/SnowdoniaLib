@@ -1,4 +1,4 @@
-package com.snowdonia.lib.data;
+package com.snowdonia.lib.imagerecognition.data;
 
 public class Area
 {
